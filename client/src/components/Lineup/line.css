@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+.container{
+    display: flex;
+    background-color: #0e0f24;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+}
+
+.festival{
+    display: flex;
+    background-image: url('../../assets/bg.jpg');
+    height: 85rem;
+    flex-wrap: wrap;
+    padding: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    font-weight: bold;
+    gap: 2.5rem;
+    color: #33d9e1;
+}
