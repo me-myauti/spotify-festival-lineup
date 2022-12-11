@@ -8,7 +8,7 @@ const spotifyApi = new SpotifyWebApi({
 })
 
 
-export default function useRequests( accessToken, option, reqType ){
+export default function useRequests(accessToken, option, reqType) {
     const [topArtists, setTopArtists] = useState([])
     const token = accessToken
     useEffect(() => {

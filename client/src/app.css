@@ -1,11 +1,10 @@
 :root {
     --primary-color: #ffafbc;
-    --light-pink: rgb(254, 174, 212);
+    --light-pink: #fe95b4;
     --second-color: rgb(253, 169, 96);
-
 }
 
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,6 +13,12 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+
+
 body * {
     font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
 }

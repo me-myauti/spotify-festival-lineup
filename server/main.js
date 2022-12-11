@@ -13,8 +13,8 @@ app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken
   const spotifyApi = new SpotifyWebApi({
     redirectUri: 'http://localhost:5173/',
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
-    clientSecret: 'f36a194b2c2746b9b7bae004cf666849',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
+    clientSecret: '5f0ef4d0f51a4c49ac2f7d1672c6771f',
     refreshToken,
   })
   spotifyApi
@@ -34,7 +34,7 @@ app.post("/refresh", (req, res) => {
 app.post('/artistsShortTerm', (req, res) => {
   const accessToken = req.body.accessToken
   const spotifyApi = new SpotifyWebApi({
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
     accessToken
   })
 
@@ -51,7 +51,7 @@ app.post('/artistsShortTerm', (req, res) => {
 app.post('/artistsMediumTerm', (req, res) => {
   const accessToken = req.body.accessToken
   const spotifyApi = new SpotifyWebApi({
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
     accessToken
   })
 
@@ -67,7 +67,7 @@ app.post('/artistsMediumTerm', (req, res) => {
 app.post('/artistsLongTerm', (req, res) => {
   const accessToken = req.body.accessToken
   const spotifyApi = new SpotifyWebApi({
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
     accessToken
   })
 
@@ -85,7 +85,7 @@ app.post('/artistsLongTerm', (req, res) => {
 app.post('/musicsShortTerm', (req, res) => {
   const accessToken = req.body.accessToken
   const spotifyApi = new SpotifyWebApi({
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
     accessToken
   })
 
@@ -101,7 +101,7 @@ app.post('/musicsShortTerm', (req, res) => {
 app.post('/musicsMediumTerm', (req, res) => {
   const accessToken = req.body.accessToken
   const spotifyApi = new SpotifyWebApi({
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
     accessToken
   })
 
@@ -117,7 +117,7 @@ app.post('/musicsMediumTerm', (req, res) => {
 app.post('/musicsLongTerm', (req, res) => {
   const accessToken = req.body.accessToken
   const spotifyApi = new SpotifyWebApi({
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
     accessToken
   })
 
@@ -133,9 +133,9 @@ app.post('/musicsLongTerm', (req, res) => {
 app.post("/login", (req, res) => {
   const code = req.body.code
   const spotifyApi = new SpotifyWebApi({
-    clientId: '7352e308c7a8445fb047ceaccdf09ce7',
+    clientId: '2ed95d16f8634e5785b218d729c08724',
     redirectUri: 'http://localhost:5173/',
-    clientSecret: 'f36a194b2c2746b9b7bae004cf666849',
+    clientSecret: '5f0ef4d0f51a4c49ac2f7d1672c6771f',
   })
 
   spotifyApi

@@ -1,31 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-.container{
+
+.container-lineup {
     display: flex;
-    background-image: url('../../assets/bg.jpg');
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    justify-content: flex-end;
+    align-items: flex-start;
     flex-direction: column;
+
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+
+    width: 100vw;
+    max-width: 1200px;
+    height: 500px;
+
     color: white;
-    font-family: 'Fredoka One', cursive;
+
+    background: url('../../assets/pinkpersonmusic.avif');
+    background-position-y: -300px;
+    background-repeat: no-repeat;
+
+
+    margin: 0 auto;
 }
 
-.festival{
+.list-lineup {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.buttons-lineup {
     display: flex;
-    
-    height: 85rem;
-    flex-wrap: wrap;
-    padding: 5rem;
-    justify-content: space-around;
     align-items: center;
-    font-family: 'Fredoka One', cursive;
-    font-weight: bold;
-    gap: 2.5rem;
-    color: #33d9e1;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: 2rem 1rem;
+
+    background-color: #fff;
 }
 
-.selected{
+.buttons-lineup div {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons-lineup button {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: transparent;
+
+    color: var(--light-pink);
+
+    cursor: pointer;
+
+
+}
+
+.buttons-lineup button::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: var(--light-pink);
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.buttons-lineup button:hover::after {
+    width: 100%;
+}
+
+.festival {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #fff;
+    overflow: hidden;
+    font-weight: bold;
+
+    padding-top: 2rem;
+
+
+
+}
+
+
+.selected {
     border: 1px solid brown;
 }
