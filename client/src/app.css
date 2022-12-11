@@ -1,7 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+:root {
+    --primary-color: #ffafbc;
+    --light-pink: rgb(254, 174, 212);
+    --second-color: rgb(253, 169, 96);
 
-body{
+}
+
+body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+body * {
     font-family: 'Roboto', sans-serif;
 }

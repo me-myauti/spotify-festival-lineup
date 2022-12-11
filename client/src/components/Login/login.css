@@ -1,7 +1,48 @@
-.container{
+.container-login {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+
+    background-image: url("../../../src/assets/background.jpg");
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.card-login {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+h1 {
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+}
+
+
+a {
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: 700;
+
+
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+a:hover {
+    box-shadow: 0px 4px 64px 26px rgba(201, 80, 212, 0.6);
+    -webkit-box-shadow: 0px 4px 64px 26px rgba(201, 80, 212, 0.6);
+    -moz-box-shadow: 0px 4px 64px 26px rgba(201, 80, 212, 0.6);
 }
