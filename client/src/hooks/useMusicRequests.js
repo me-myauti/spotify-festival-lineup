@@ -8,8 +8,8 @@ const spotifyApi = new SpotifyWebApi({
 })
 
 
-export default function useRequests(accessToken, option) {
-    const [topArtists, setTopArtists] = useState([])
+export default function useMusicRequests(accessToken, option) {
+    const [topMusics, setTopMusics] = useState([])
     const token = accessToken
     useEffect(() => {
         if (!token) return
@@ -18,14 +18,15 @@ export default function useRequests(accessToken, option) {
 
     useEffect(() => {
         if (!token) return
-            axios.post(`http://localhost:3001/artists${option}`, {
+            console.log(option)
+            axios.post(`http://localhost:3001/musics${option}`, {
                 accessToken
             }).then(res => {
-                setTopArtists(res.data.topArtists)
+                setTopMusics(res.data.topArtists)
             }).catch(err => {
                 console.log(err)
             })
     }, [option, token])
 
-    return topArtists
+    return topMusics
 }

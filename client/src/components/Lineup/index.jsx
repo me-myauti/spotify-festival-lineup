@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
 import SpotifyWebApi from "spotify-web-api-node";
 import List from '../List';
+import ListMusic from '../ListMusic';
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: import.meta.env.CLIENT_ID,
+    clientId: '187159b003a64400a1bda157df63d263',
 })
 
 export default function Lineup({ code }) {
@@ -20,7 +21,7 @@ export default function Lineup({ code }) {
 
 
     const [range, setRange] = useState('ShortTerm')
-    const [option, setOption] = useState('artists')
+    const [option, setOption] = useState()
 
     useEffect(() => {
         if (range == 'ShortTerm') {
@@ -39,40 +40,83 @@ export default function Lineup({ code }) {
 
     }, [range])
 
-    useEffect(() => {
-        if (option == 'artists') {
-            document.getElementById('artists').classList.add('selected')
-            document.getElementById('musics').classList.remove('selected')
-        } else {
-            document.getElementById('artists').classList.remove('selected')
-            document.getElementById('musics').classList.add('selected')
-        }
-    }, [option])
-
-    return (
-        <div>
-            <div className="container-lineup">
-                <h1>This is your festival</h1>
-
-            </div>
-
-            <div className="list-lineup">
-                <div className="buttons-lineup">
-                    <div>
-                        <button id='short' onClick={() => setRange('ShortTerm')}>Short</button>
-                        <button id='medium' onClick={() => setRange('MediumTerm')}>Medium</button>
-                        <button id='long' onClick={() => setRange('LongTerm')}>Long</button>
-                    </div>
-                    <div>
-                        <button id='artists' onClick={() => { setOption('artists') }}>Your most heard artists</button>
-                        <button id='musics' onClick={() => { setOption('musics') }}>Your most heard musics</button>
-                    </div>
+    if (option == 'musics') {
+        return (
+            <div>
+                <div className="container-lineup">
+                    <h1>This is your festival</h1>
 
                 </div>
-                <List accessToken={accessToken} option={range} reqType={option} code={code} />
+
+                <div className="list-lineup">
+                    <div className="buttons-lineup">
+                        <div>
+                            <button id='short' onClick={() => setRange('ShortTerm')}>Short</button>
+                            <button id='medium' onClick={() => setRange('MediumTerm')}>Medium</button>
+                            <button id='long' onClick={() => setRange('LongTerm')}>Long</button>
+                        </div>
+                        <div>
+                            <button id='medium' onClick={() => setOption('artists')}>Artists</button>
+                            <button id='short' onClick={() => setOption('musics')}>Musics</button>
+                        </div>
+                    </div>
+                    <ListMusic accessToken={accessToken} option={range} code={code} />
+                </div>
+
+
             </div>
+        )
+    } else if (option == 'artists') {
+        return (
+            <div>
+                <div className="container-lineup">
+                    <h1>This is your festival</h1>
+
+                </div>
+
+                <div className="list-lineup">
+                    <div className="buttons-lineup">
+                        <div>
+                            <button id='short' onClick={() => setRange('ShortTerm')}>Short</button>
+                            <button id='medium' onClick={() => setRange('MediumTerm')}>Medium</button>
+                            <button id='long' onClick={() => setRange('LongTerm')}>Long</button>
+                        </div>
+                        <div>
+                            <button onClick={() => setOption('artists')}>Artists</button>
+                            <button onClick={() => setOption('musics')}>Musics</button>
+                        </div>
+                    </div>
+                    <List accessToken={accessToken} option={range} code={code} />
+                </div>
 
 
-        </div>
-    )
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <div className="container-lineup">
+                    <h1>This is your festival</h1>
+
+                </div>
+
+                <div className="list-lineup">
+                    <div className="buttons-lineup">
+                        <div>
+                            <button id='short' onClick={() => setRange('ShortTerm')}>Short</button>
+                            <button id='medium' onClick={() => setRange('MediumTerm')}>Medium</button>
+                            <button id='long' onClick={() => setRange('LongTerm')}>Long</button>
+                        </div>
+                        <div>
+                            <button id='medium' onClick={() => setOption('artists')}>Artists</button>
+                            <button id='short' onClick={() => setOption('musics')}>Musics</button>
+                        </div>
+                    </div>
+                    <List accessToken={accessToken} option={range} code={code} />
+                </div>
+
+
+            </div>
+        )
+    }
 }
