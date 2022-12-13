@@ -9,6 +9,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 
+app.get('/health', (req,res)=>{
+  res.json({greetings: 'server is running'})
+})
+
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken
   const spotifyApi = new SpotifyWebApi({
