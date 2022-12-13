@@ -44,20 +44,20 @@ export default function Lineup({ code }) {
         return (
             <div>
                 <div className="container-lineup">
-                    <h1>This is your festival</h1>
+                    <h1>Your heartwarming songs</h1>
 
                 </div>
 
                 <div className="list-lineup">
                     <div className="buttons-lineup">
                         <div>
-                            <button id='short' onClick={() => setRange('ShortTerm')}>Short</button>
-                            <button id='medium' onClick={() => setRange('MediumTerm')}>Medium</button>
-                            <button id='long' onClick={() => setRange('LongTerm')}>Long</button>
+                            <button id='short' onClick={() => setRange('ShortTerm')}>Last month</button>
+                            <button id='medium' onClick={() => setRange('MediumTerm')}>Last 6 months</button>
+                            <button id='long' onClick={() => setRange('LongTerm')}>All time</button>
                         </div>
                         <div>
-                            <button id='medium' onClick={() => setOption('artists')}>Artists</button>
-                            <button id='short' onClick={() => setOption('musics')}>Musics</button>
+                            <button style={{color: '#fda960'}} id='medium' onClick={() => setOption('artists')}>Artists</button>
+                            <button style={{color: '#fda960'}} id='short' onClick={() => setOption('musics')}>Musics</button>
                         </div>
                     </div>
                     <ListMusic accessToken={accessToken} option={range} code={code} />
@@ -77,13 +77,13 @@ export default function Lineup({ code }) {
                 <div className="list-lineup">
                     <div className="buttons-lineup">
                         <div>
-                            <button id='short' onClick={() => setRange('ShortTerm')}>Short</button>
-                            <button id='medium' onClick={() => setRange('MediumTerm')}>Medium</button>
-                            <button id='long' onClick={() => setRange('LongTerm')}>Long</button>
+                            <button id='short' onClick={() => setRange('ShortTerm')}>Last month</button>
+                            <button id='medium' onClick={() => setRange('MediumTerm')}>Last 6 months</button>
+                            <button id='long' onClick={() => setRange('LongTerm')}>All time</button>
                         </div>
                         <div>
-                            <button onClick={() => setOption('artists')}>Artists</button>
-                            <button onClick={() => setOption('musics')}>Musics</button>
+                            <button style={{color: '#fda960'}} onClick={() => setOption('artists')}>Artists</button>
+                            <button style={{color: '#fda960'}} onClick={() => setOption('musics')}>Musics</button>
                         </div>
                     </div>
                     <List accessToken={accessToken} option={range} code={code} />
@@ -103,13 +103,13 @@ export default function Lineup({ code }) {
                 <div className="list-lineup">
                     <div className="buttons-lineup">
                         <div>
-                            <button id='short' onClick={() => setRange('ShortTerm')}>Short</button>
-                            <button id='medium' onClick={() => setRange('MediumTerm')}>Medium</button>
-                            <button id='long' onClick={() => setRange('LongTerm')}>Long</button>
+                            <button id='short' onClick={() => setRange('ShortTerm')}>Last month</button>
+                            <button id='medium' onClick={() => setRange('MediumTerm')}>Last 6 months</button>
+                            <button id='long' onClick={() => setRange('LongTerm')}>All time</button>
                         </div>
                         <div>
-                            <button id='medium' onClick={() => setOption('artists')}>Artists</button>
-                            <button id='short' onClick={() => setOption('musics')}>Musics</button>
+                            <button id='medium' style={{color: '#fda960'}} onClick={() => setOption('artists')}>Artists</button>
+                            <button id='short'  style={{color: '#fda960'}} onClick={() => setOption('musics')}>Musics</button>
                         </div>
                     </div>
                     <List accessToken={accessToken} option={range} code={code} />

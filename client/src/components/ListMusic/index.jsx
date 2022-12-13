@@ -37,7 +37,7 @@ export default function ListMusic({ accessToken, option }) {
                         </div>
                     </div>
 
-                    <a className="checkArtist" href={artist.external_urls.spotify}>{'>'}</a>
+                    <a className="checkArtist" target='_blank' href={artist.external_urls.spotify}>{'>'}</a>
                 </div>
             ))
             }

@@ -42,7 +42,7 @@ export default function List({ accessToken, option, reqType }) {
                         </div>
                     </div>
 
-                    <a className="checkArtist" href={artist.external_urls.spotify}>{'>'}</a>
+                    <a className="checkArtist" target='_blank' href={artist.external_urls.spotify}>{'>'}</a>
                 </div>
             ))
             }

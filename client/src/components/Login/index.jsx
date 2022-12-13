@@ -5,7 +5,7 @@ export default function Login() {
     return (
         <div className="container-login">
             <div className="card-login">
-                <h1>Check your most heard artists </h1>
+                <h1>Check your most heard artists and songs</h1>
                 <a className="btn" href={AUTH_URL}>
                     Login With Spotify
                 </a>
